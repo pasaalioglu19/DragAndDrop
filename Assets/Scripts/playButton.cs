@@ -1,11 +1,11 @@
 using UnityEngine;
 
 
-public class playButton : MonoBehaviour
+public class PlayButton : MonoBehaviour
 {
-    public SceneTransition panel;
-    public void playScene()
+    public SceneTransition Panel;
+    public void PlayScene()
     {
-        panel.TransitionToScene(); // Switches to the next scene
+        Panel.TransitionToScene(); // Switches to the next scene
     }
 }

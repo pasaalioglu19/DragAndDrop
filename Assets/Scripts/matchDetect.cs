@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class matchDetect : MonoBehaviour
+public class MatchDetect : MonoBehaviour
 { 
     private float offset = 0.531F; // Offset value for possible y-axis translation cases
     void OnTriggerEnter2D(Collider2D other)

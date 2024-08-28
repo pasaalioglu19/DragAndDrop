@@ -5,39 +5,39 @@ using System.Collections;
 
 public class SceneTransition : MonoBehaviour
 {
-    public GameObject transitionPanel;
+    public GameObject TransitionPanel;
     private float transitionTime = 1f;
 
     public void FadeInToScene()
     {
-        StartCoroutine(FadeInCoroutine());
-    }
+        StartCoroutine(fadeInCoroutine());
+    } 
     public void TransitionToScene()
     {
-        StartCoroutine(TransitionCoroutine());
+        StartCoroutine(transitionCoroutine());
     }
 
-    private IEnumerator TransitionCoroutine()
+    private IEnumerator transitionCoroutine()
     {
-        // Paneli göster ve fade out yap
-        transitionPanel.SetActive(true);
-        CanvasGroup canvasGroup = transitionPanel.GetComponent<CanvasGroup>();
+        // Paneli gï¿½ster ve fade out yap
+        TransitionPanel.SetActive(true);
+        CanvasGroup canvasGroup = TransitionPanel.GetComponent<CanvasGroup>();
         for (float t = 0; t < transitionTime; t += Time.deltaTime)
         {
             canvasGroup.alpha = Mathf.Lerp(0, 1, t / transitionTime);
-            yield return null;
+            yield return Time.deltaTime;
         }
         canvasGroup.alpha = 1;
 
-        // Yeni sahneyi yükle
+        // Yeni sahneyi yï¿½kle
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    private IEnumerator FadeInCoroutine()
+    private IEnumerator fadeInCoroutine()
     {
-        // Yeni sahne yüklendiðinde fade in yap
-        transitionPanel.SetActive(true);
-        CanvasGroup canvasGroup = transitionPanel.GetComponent<CanvasGroup>();
+        // Yeni sahne yï¿½klendiï¿½inde fade in yap
+        TransitionPanel.SetActive(true);
+        CanvasGroup canvasGroup = TransitionPanel.GetComponent<CanvasGroup>();
         canvasGroup.alpha = 1;
         for (float t = 0; t < transitionTime; t += Time.deltaTime)
         {
@@ -45,6 +45,6 @@ public class SceneTransition : MonoBehaviour
             yield return null;
         }
         canvasGroup.alpha = 0;
-        transitionPanel.SetActive(false);
+        TransitionPanel.SetActive(false);
     }
 }

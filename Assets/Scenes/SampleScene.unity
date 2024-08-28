@@ -1085,7 +1085,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8198d951d627f4e48a035374a85a9735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x: {fileID: 2024771400}
+  GameLogicObject: {fileID: 2024771400}
 --- !u!1 &319911270
 GameObject:
   m_ObjectHideFlags: 0
@@ -1397,7 +1397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8198d951d627f4e48a035374a85a9735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x: {fileID: 2024771400}
+  GameLogicObject: {fileID: 2024771400}
 --- !u!1 &422264459
 GameObject:
   m_ObjectHideFlags: 0
@@ -1577,7 +1577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8198d951d627f4e48a035374a85a9735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x: {fileID: 2024771400}
+  GameLogicObject: {fileID: 2024771400}
 --- !u!1 &438696124
 GameObject:
   m_ObjectHideFlags: 0
@@ -1801,7 +1801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8198d951d627f4e48a035374a85a9735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x: {fileID: 2024771400}
+  GameLogicObject: {fileID: 2024771400}
 --- !u!1 &498259185
 GameObject:
   m_ObjectHideFlags: 0
@@ -1981,7 +1981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8198d951d627f4e48a035374a85a9735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x: {fileID: 2024771400}
+  GameLogicObject: {fileID: 2024771400}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2323,7 +2323,7 @@ GameObject:
   - component: {fileID: 848441597}
   - component: {fileID: 848441600}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Flame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2383,8 +2383,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 63, y: 1022}
-  m_SizeDelta: {x: 225, y: 225}
+  m_AnchoredPosition: {x: 25, y: 283}
+  m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &848441600
 Animator:
@@ -2692,7 +2692,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8198d951d627f4e48a035374a85a9735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x: {fileID: 2024771400}
+  GameLogicObject: {fileID: 2024771400}
 --- !u!1 &1047213397
 GameObject:
   m_ObjectHideFlags: 0
@@ -3065,7 +3065,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8198d951d627f4e48a035374a85a9735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x: {fileID: 2024771400}
+  GameLogicObject: {fileID: 2024771400}
 --- !u!1 &1076250776
 GameObject:
   m_ObjectHideFlags: 0
@@ -3077,7 +3077,7 @@ GameObject:
   - component: {fileID: 1076250778}
   - component: {fileID: 1076250777}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Scene Transition Script
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3095,7 +3095,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78ad0eb197a774b448a56bb666d344df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionPanel: {fileID: 319911270}
+  TransitionPanel: {fileID: 319911270}
 --- !u!4 &1076250778
 Transform:
   m_ObjectHideFlags: 0
@@ -3899,8 +3899,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -185}
-  m_SizeDelta: {x: 716.52, y: 300}
+  m_AnchoredPosition: {x: 0, y: -87}
+  m_SizeDelta: {x: 175, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1466297356
 Animator:
@@ -3945,7 +3945,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 200
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -4144,7 +4144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8198d951d627f4e48a035374a85a9735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x: {fileID: 2024771400}
+  GameLogicObject: {fileID: 2024771400}
 --- !u!1 &1525316303
 GameObject:
   m_ObjectHideFlags: 0
@@ -4442,7 +4442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8198d951d627f4e48a035374a85a9735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x: {fileID: 2024771400}
+  GameLogicObject: {fileID: 2024771400}
 --- !u!1 &1628248504
 GameObject:
   m_ObjectHideFlags: 0
@@ -4706,7 +4706,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8198d951d627f4e48a035374a85a9735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x: {fileID: 2024771400}
+  GameLogicObject: {fileID: 2024771400}
 --- !u!1 &1727003411
 GameObject:
   m_ObjectHideFlags: 0
@@ -4854,14 +4854,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e1e93dd005385e4b9daf47fe352a55c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  comboCount: {fileID: 2044254448}
-  comboText: {fileID: 1466297357}
-  popUp: {fileID: 1437816320}
-  panel: {fileID: 1076250777}
-  flameImage: {fileID: 848441597}
-  oneStar: {fileID: 1049473621}
-  twoStar: {fileID: 162483130}
-  threeStar: {fileID: 64035136}
+  ComboCount: {fileID: 2044254448}
+  ComboText: {fileID: 1466297357}
+  PopUp: {fileID: 1437816320}
+  Panel: {fileID: 1076250777}
+  FlameImage: {fileID: 848441597}
+  OneStar: {fileID: 1049473621}
+  TwoStar: {fileID: 162483130}
+  ThreeStar: {fileID: 64035136}
 --- !u!4 &2024771401
 Transform:
   m_ObjectHideFlags: 0
@@ -5056,7 +5056,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8198d951d627f4e48a035374a85a9735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x: {fileID: 2024771400}
+  GameLogicObject: {fileID: 2024771400}
 --- !u!1 &2044254447
 GameObject:
   m_ObjectHideFlags: 0
@@ -5098,7 +5098,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 100
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -5134,8 +5134,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 240, y: 993}
-  m_SizeDelta: {x: 203.1, y: 125.4}
+  m_AnchoredPosition: {x: 86, y: 262}
+  m_SizeDelta: {x: 80, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &2044254451
 Animator:
@@ -5337,7 +5337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8198d951d627f4e48a035374a85a9735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x: {fileID: 2024771400}
+  GameLogicObject: {fileID: 2024771400}
 --- !u!1 &2139279527
 GameObject:
   m_ObjectHideFlags: 0
@@ -5517,7 +5517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8198d951d627f4e48a035374a85a9735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x: {fileID: 2024771400}
+  GameLogicObject: {fileID: 2024771400}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

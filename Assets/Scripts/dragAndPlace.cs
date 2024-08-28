@@ -2,26 +2,22 @@ using UnityEngine;
 
 public class dragAndDrop : MonoBehaviour
 {
-    public gameLogic x;
+    public GameLogic GameLogicObject;
     private Vector3 offset; // It will be used for the distance between the cursor and the object.
     private bool isDragging = false;
     private bool isPlacedCorrectly = false;
     private Vector3 originalScale;
-    private Vector3 firstPosition = new Vector3(-10, 10, 1); // Initial position information of objects
+    private Vector3 firstPosition; // Initial position information of objects
     private Vector3 realPosition; // Exact position where the object should be placed
 
     void Start()
     {
-        originalScale = transform.localScale; // Holding localScale value for future
+        originalScale = transform.localScale;
+        firstPosition = transform.position;
+        // Holding localScale value for future
     }
     void OnMouseDown()
     {
-        // If the initial position data of object has not yet been changed, the first cursor click saves the initial position data of object
-        if (firstPosition == new Vector3(-10, 10, 1))
-        {
-            firstPosition = transform.position;
-        }
-
         if (!isPlacedCorrectly) // The object can only move if it is not placed in the right place
         {
             transform.localScale = originalScale * 1.18182f;
@@ -49,12 +45,12 @@ public class dragAndDrop : MonoBehaviour
         {
             transform.localScale = originalScale;
             transform.position = firstPosition;
-            x.incorrectlyPlaced();
+            GameLogicObject.IncorrectlyPlaced();
         }
         // returns to the exact position if the object was placed correctly
         else
         {
-            x.correctlyPlaced();
+            GameLogicObject.CorrectlyPlaced();
             transform.position = transform.parent.TransformPoint(realPosition);
         }
         isDragging = false;

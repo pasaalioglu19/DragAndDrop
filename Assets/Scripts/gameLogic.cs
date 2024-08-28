@@ -3,31 +3,31 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class gameLogic : MonoBehaviour
+public class GameLogic : MonoBehaviour
 {
     private int placedObject = 0;
     private int objectCount = 13;
     private int combo = 0;
     private int comboStarter = 3;
-    public Text comboCount;
-    public Text comboText;
-    public GameObject popUp;
-    public SceneTransition panel;
-    public Image flameImage;
-    public Image oneStar;
-    public Image twoStar;
-    public Image threeStar;
+    public Text ComboCount;
+    public Text ComboText;
+    public GameObject PopUp;
+    public SceneTransition Panel;
+    public Image FlameImage;
+    public Image OneStar;
+    public Image TwoStar;
+    public Image ThreeStar;
     private Animator flameAnim;
     
 
     void Start()
     {
-        panel.FadeInToScene(); // Game scene start effect
-        flameAnim = flameImage.gameObject.GetComponent<Animator>();
+        Panel.FadeInToScene(); // Game scene start effect
+        flameAnim = FlameImage.gameObject.GetComponent<Animator>();
     }
 
     // In case of correct placement, the relevant procedures are organised
-    public void correctlyPlaced()
+    public void CorrectlyPlaced()
     {
         combo++;
         placedObject++;
@@ -35,14 +35,14 @@ public class gameLogic : MonoBehaviour
         if (combo == comboStarter) // Handles the combo initial state
         {
             StartCoroutine(comboTextCoroutine()); // Combo text appears on the screen
-            comboCount.gameObject.SetActive(true); 
-            flameImage.gameObject.SetActive(true);
-            comboCount.text = "x" + (combo-2).ToString();
+            ComboCount.gameObject.SetActive(true); 
+            FlameImage.gameObject.SetActive(true);
+            ComboCount.text = "x" + (combo-2).ToString();
         }
         else if (combo > comboStarter) // Handles the situation where the combo continues
         {
             StartCoroutine(flameAnimCoroutine());
-            comboCount.text = "x" + (combo - 2).ToString();
+            ComboCount.text = "x" + (combo - 2).ToString();
         }
 
         // Organises the popup display and star events when all objects are correctly placed
@@ -50,33 +50,33 @@ public class gameLogic : MonoBehaviour
         {
             if(combo - 2 > (float)(objectCount - comboStarter + 1) / 3 * 2)
             {
-                threeStar.gameObject.SetActive(true);
+                ThreeStar.gameObject.SetActive(true);
             }
             else if (combo - 2 > (float)(objectCount - comboStarter + 1) / 3)
             {
-                twoStar.gameObject.SetActive(true);
+                TwoStar.gameObject.SetActive(true);
             }
             else
             {
-                oneStar.gameObject.SetActive(true);
+                OneStar.gameObject.SetActive(true);
             }
-            popUp.SetActive(true);
+            PopUp.SetActive(true);
         }
     }
 
     // Updates the relevant combo events in case of misplacement
-    public void incorrectlyPlaced()
+    public void IncorrectlyPlaced()
     {
         combo = 0;
-        comboCount.gameObject.SetActive(false);
-        flameImage.gameObject.SetActive(false);
+        ComboCount.gameObject.SetActive(false);
+        FlameImage.gameObject.SetActive(false);
     }
 
     private IEnumerator comboTextCoroutine()
     {
-        comboText.gameObject.SetActive(true);
+        ComboText.gameObject.SetActive(true);
         yield return new WaitForSeconds(1.4f);
-        comboText.gameObject.SetActive(false);
+        ComboText.gameObject.SetActive(false);
     }
     private IEnumerator flameAnimCoroutine()
     {
@@ -86,7 +86,7 @@ public class gameLogic : MonoBehaviour
     }
 
     // Clicking the replay button opens the game again
-    public void retryButton()
+    public void RetryButton()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
