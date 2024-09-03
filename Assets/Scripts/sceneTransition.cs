@@ -2,9 +2,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
+using DG.Tweening;
 
 public class SceneTransition : MonoBehaviour
 {
+    public Button PlayButton;
     public GameObject TransitionPanel;
     private float transitionTime = 1f;
 
@@ -19,7 +21,6 @@ public class SceneTransition : MonoBehaviour
 
     private IEnumerator transitionCoroutine()
     {
-        // Paneli g�ster ve fade out yap
         TransitionPanel.SetActive(true);
         CanvasGroup canvasGroup = TransitionPanel.GetComponent<CanvasGroup>();
         for (float t = 0; t < transitionTime; t += Time.deltaTime)
@@ -29,13 +30,12 @@ public class SceneTransition : MonoBehaviour
         }
         canvasGroup.alpha = 1;
 
-        // Yeni sahneyi y�kle
+        PlayButton.transform.DOKill();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     private IEnumerator fadeInCoroutine()
     {
-        // Yeni sahne y�klendi�inde fade in yap
         TransitionPanel.SetActive(true);
         CanvasGroup canvasGroup = TransitionPanel.GetComponent<CanvasGroup>();
         canvasGroup.alpha = 1;

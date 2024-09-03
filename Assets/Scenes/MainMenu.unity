@@ -512,7 +512,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 698355360}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -521,8 +521,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -11, y: -641}
-  m_SizeDelta: {x: 471, y: 300}
+  m_AnchoredPosition: {x: 2, y: -496}
+  m_SizeDelta: {x: 360, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &698355362
 MonoBehaviour:
@@ -568,9 +568,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 874526678}
-        m_TargetAssemblyTypeName: PlayButton, Assembly-CSharp
-        m_MethodName: PlayScene
+      - m_Target: {fileID: 1037940442}
+        m_TargetAssemblyTypeName: SceneTransition, Assembly-CSharp
+        m_MethodName: TransitionToScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -668,7 +668,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6083f4d8af3c2d04e9375da46e5c1848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Panel: {fileID: 1037940442}
+  buttonGrownScale: 1.14
+  buttonGrownTime: 0.4
+  buttonRotateAngle: 3
+  buttonRotateTime: 0.8
+  playbutton: {fileID: 698355362}
 --- !u!4 &874526679
 Transform:
   m_ObjectHideFlags: 0
@@ -713,6 +717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78ad0eb197a774b448a56bb666d344df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayButton: {fileID: 698355362}
   TransitionPanel: {fileID: 1649702952}
 --- !u!4 &1037940443
 Transform:
