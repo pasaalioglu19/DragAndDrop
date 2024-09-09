@@ -18,17 +18,20 @@ public class AnimationScripts : MonoBehaviour
     [Header("Combo Count Settings")]
     [SerializeField] float comboCountTime = 0.25f;
     [SerializeField] int comboCountCount = 6;
+    [Header("Lightbulb Settings")]
+    [SerializeField] float lightbulbGrownScale = 1.275f;
+    [SerializeField] float lightbulbGrownTime = 1f;
+    [SerializeField] int lightbulbGrownCount = 3;
 
     public GameObject ComboCount;
     public GameObject Flame;
     public GameObject ComboText;
-    private Vector3 originalScale;
+    public GameObject Lightbulb;
     private RectTransform flameRectTransform;
 
     private void Start()
     {
         flameRectTransform = Flame.GetComponent<RectTransform>();
-        originalScale = Flame.GetComponent<RectTransform>().localScale;
     }
 
     public void ComboTextEffect()
@@ -41,6 +44,10 @@ public class AnimationScripts : MonoBehaviour
     {
         ComboCount.SetActive(false);
         Flame.SetActive(false);
+    }
+    public void LightBulbScale()
+    {
+        Lightbulb.GetComponent<RectTransform>().DOScale(lightbulbGrownScale, lightbulbGrownTime).SetLoops(lightbulbGrownCount * 2, LoopType.Yoyo);
     }
 
     public void ComboCountEffect(int combo, bool isFirstTime)
@@ -57,17 +64,17 @@ public class AnimationScripts : MonoBehaviour
     public void FlameScaleEffect1()
     {
         Flame.SetActive(true);
-        flameRectTransform.DOScale(originalScale * flameGrownScale1, flameGrownTime).SetLoops(flameGrownCount * 2, LoopType.Yoyo);
+        flameRectTransform.DOScale(flameGrownScale1, flameGrownTime).SetLoops(flameGrownCount * 2, LoopType.Yoyo);
     }
     public void FlameScaleEffect2()
     {
-        Flame.GetComponent<RectTransform>().DOScale(originalScale * flameGrownScale2, flameGrownTime).SetLoops(flameGrownCount2 * 2, LoopType.Yoyo);
+        Flame.GetComponent<RectTransform>().DOScale(flameGrownScale2, flameGrownTime).SetLoops(flameGrownCount2 * 2, LoopType.Yoyo);
     }
 
     private void comboTextScaleEffect()
     {
         ComboText.SetActive(true);
-        ComboText.GetComponent<RectTransform>().DOScale(originalScale * comboTextGrownScale, comboTextGrownTime).SetLoops(2, LoopType.Yoyo);
+        ComboText.GetComponent<RectTransform>().DOScale(comboTextGrownScale, comboTextGrownTime).SetLoops(2, LoopType.Yoyo);
     }
 
     private void comboTextColorEffect()

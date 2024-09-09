@@ -5,11 +5,14 @@ using UnityEngine.UI;
 public class GameLogic : MonoBehaviour
 {
     private int placedObject = 0;
+    private int combo = 0;
+    private int incorrectStackCount = 0;
+
     private int objectCount = 13;
 
     [Header("Combo Settings")]
-    [SerializeField] int combo = 0;
     [SerializeField] int comboStarter = 3;
+    [SerializeField] int hintAlertStarter = 3;
     public GameObject PopUp;
     public SceneTransition Panel;
     public Image OneStar;
@@ -35,6 +38,7 @@ public class GameLogic : MonoBehaviour
     {
         if (isCorrectlyPlaced)
         {
+            incorrectStackCount = 0;
             combo++;
             placedObject++;
 
@@ -55,6 +59,14 @@ public class GameLogic : MonoBehaviour
         }
 
         combo = 0;
+        if (combo == 0)
+        {
+            incorrectStackCount++;
+            if (incorrectStackCount >= hintAlertStarter)
+            {
+                AnimationScript.LightBulbScale();
+            }
+        }
         AnimationScript.IncorrectPlacedDeactivate();
     }
 

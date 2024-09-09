@@ -3,6 +3,7 @@ using UnityEngine;
 public class dragAndDrop : MonoBehaviour
 {
     public GameLogic GameLogicObject;
+    public float DraggedObjectScale = 1.18182f;
     private Vector3 offset; // It will be used for the distance between the cursor and the object.
     private bool isDragging = false;
     private bool isPlacedCorrectly = false;
@@ -59,7 +60,7 @@ public class dragAndDrop : MonoBehaviour
     {
         if (!isPlacedCorrectly) // The object can only move if it is not placed in the right place
         {
-            transform.localScale = originalScale * 1.18182f;
+            transform.localScale = originalScale * DraggedObjectScale;
             offset = transform.position - GetMouseWorldPosition();
             isDragging = true;
             SpriteRenderer sr = GetComponent<SpriteRenderer>();
