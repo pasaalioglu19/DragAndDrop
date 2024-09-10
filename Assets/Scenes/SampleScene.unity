@@ -953,6 +953,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Assets: {fileID: 0}
   ShadowColliders: {fileID: 0}
+  LogicObject: {fileID: 0}
   HandScript: {fileID: 0}
 --- !u!1 &305493344
 GameObject:
@@ -2665,6 +2666,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Assets: {fileID: 438696124}
   ShadowColliders: {fileID: 320767019}
+  LogicObject: {fileID: 2024771400}
   HandScript: {fileID: 757893817}
 --- !u!4 &811435313
 Transform:
@@ -2753,7 +2755,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 82, y: 1057}
+  m_AnchoredPosition: {x: 260.99997, y: 1761}
   m_SizeDelta: {x: 225, y: 225}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &855392174
@@ -2975,10 +2977,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -4058,8 +4060,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -436, y: 1093}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchoredPosition: {x: -621, y: 1788}
+  m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1440540211
 MonoBehaviour:
@@ -5940,6 +5942,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   comboStarter: 3
   hintAlertStarter: 3
+  hintRemaining: 2
   PopUp: {fileID: 1437816320}
   Panel: {fileID: 1076250777}
   OneStar: {fileID: 1049473621}
@@ -6219,7 +6222,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 285, y: 1031}
+  m_AnchoredPosition: {x: 464, y: 1718}
   m_SizeDelta: {x: 250, y: 115}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &2044254451

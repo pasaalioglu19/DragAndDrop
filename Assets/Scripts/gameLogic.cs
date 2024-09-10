@@ -13,6 +13,10 @@ public class GameLogic : MonoBehaviour
     [Header("Combo Settings")]
     [SerializeField] int comboStarter = 3;
     [SerializeField] int hintAlertStarter = 3;
+
+    [Header("Hint Settings")]
+    [SerializeField] int hintRemaining = 2; 
+
     public GameObject PopUp;
     public SceneTransition Panel;
     public Image OneStar;
@@ -97,6 +101,16 @@ public class GameLogic : MonoBehaviour
             OneStar.gameObject.SetActive(true);
         }
         PopUp.SetActive(true);
+    }
+
+    public int GetHintRemaining()
+    {
+        return hintRemaining;
+    }
+
+    public void DecreaseHintRemaining()
+    {
+        hintRemaining--;
     }
 
 }

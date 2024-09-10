@@ -4,15 +4,22 @@ public class Lightbulb : MonoBehaviour
 {
     public GameObject Assets; 
     public GameObject ShadowColliders;
+    public GameLogic LogicObject;
     public Hand HandScript;
+
 
     public void ShowHint()
     {
+        int hintRemaning = LogicObject.GetHintRemaining();
+        if (hintRemaning <= 0) //sor == yapsam riskli ama doðru
+        {
+            return;
+        }
+        LogicObject.DecreaseHintRemaining();
         int childCount = Assets.transform.childCount;
 
         int randomIndex = Random.Range(0, childCount);
 
-        // Rastgele seçilen indekse göre child objeyi al
         GameObject targetAsset = Assets.transform.GetChild(randomIndex).gameObject;
         Vector3 assetPosition = targetAsset.transform.position;
         string assetName = targetAsset.name;
